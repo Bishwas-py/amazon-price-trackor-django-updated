@@ -1,0 +1,49 @@
+-> remove pywin32 while deploying.....or while running requirements.txt in production....heroku doesnt support pyin32.....https://www.lfd.uci.edu/~gohlke/pythonlibs/   for all whl links
+
+-> heroku login
+-> git init 
+-> heroku apps
+-> heroku apps:info
+-> heroku create projectname
+
+
+->create new branch
+First, you create your branch locally:
+       (git checkout -b <branch-name> # Create a new branch and check it out)
+The remote branch is automatically created when you push it to the remote server. So when you feel ready for it, you can just do:
+         (git push <remote-name> <branch-name> )
+->git checkout -b mybranch(to switch to another branch)
+->git push <remote_name> --delete <branch_name>(to delete branch e.g git push origin --delete mynewbranch)
+-> git checkout master(switch back to master branch)
+->git branch -a (to list all remote branches)
+
+-> git remote -v
+->git remote add origin githubURL(to add you github repo)
+->
+
+->heroku git:remote -a projectname(for already existing project on heroku)
+->git remote -v(now heroku  https://git.heroku.com/projectname.git (fetch)
+                     heroku  https://git.heroku.com/projectname.git (push)
+               )
+->ORRRRR git remote add heroku herokuWebURL(to add you Herokuproject repo)
+
+->git add *(first time)
+->git add -A(changes will be added)
+->git status
+->git commit -m"message"
+-> git push heroku master
+->heroku restart
+->heroku logs --tail (Similar to tail -f, real-time tail displays recent logs and leaves the session open for real-time logs to stream in. 
+                      By viewing a live stream of logs from your app, you can gain insight into the behavior of your live application and debug current problems.)
+->heroku config(all environments varibales set into heroku)
+->heroku run bash(to access our project on heroku server)
+->heroku run [commnad to run on heroku server] (e.g heroku run python manage.py migrate)(this will be run on server )
+->heroku addons(data base info)
+-> heroku pg
+
+->heroku logout(to completely logout from heroku CLI(i.e Command Line Interface).....if you log out manually from website than it will not logged ot from CLI
+                 you have to logout using commnad)
+->heroku git:clone -a myapp (clone existing project....this will be done when you want to work on project from another pc.....
+                             when you dont have you local repo and your peronal pc)
+
+for more commands------->  https://devcenter.heroku.com/articles/heroku-cli-commands

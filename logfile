@@ -1,0 +1,3 @@
+2021-03-13 17:42:18,987 - MainProcess - INFO - process shutting down
+2021-03-13 17:42:18,988 - MainProcess - DEBUG - running all "atexit" finalizers with priority >= 0
+2021-03-13 17:42:18,988 - MainProcess - DEBUG - running the remaining "atexit" finalizers
